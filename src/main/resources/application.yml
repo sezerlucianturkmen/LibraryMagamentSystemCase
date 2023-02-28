@@ -1,0 +1,4 @@
+#http://localhost/swagger-ui/index.html
+server:
+  port: 80
+
