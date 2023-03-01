@@ -47,7 +47,8 @@ public class DBConnection {
         try {
             Driver.class.forName("org.postgresql.Driver");
             connection=DriverManager.getConnection(DBURL,USERNAME,PASSWORD);
-            System.out.println("Connection successful");
+
+            System.err.println("Connection successful");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(DBConnection.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {

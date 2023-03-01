@@ -27,7 +27,7 @@ public class DataIMPL {
         try {
             ps = DBConnection.getInstance().getConnection().prepareStatement(sql);
             ps.executeQuery();
-            System.out.println("tblbook is implemented");
+            System.err.println("tblbook is implemented");
         }
         catch (SQLException ex) {
             Logger.getLogger(DataIMPL.class.getName()).log(Level.SEVERE, null, ex);
@@ -41,7 +41,7 @@ public class DataIMPL {
         try {
             ps = DBConnection.getInstance().getConnection().prepareStatement(sql);
             ps.executeQuery();
-            System.out.println("tblborrower is implemented");
+            System.err.println("tblborrower is implemented");
         }
         catch (SQLException ex) {
             Logger.getLogger(DataIMPL.class.getName()).log(Level.SEVERE, null, ex);
@@ -53,7 +53,7 @@ public class DataIMPL {
         try {
             ps = DBConnection.getInstance().getConnection().prepareStatement(sql);
             ps.executeQuery();
-            System.out.println("tblbookborrow is implemented");
+            System.err.println("tblbookborrow is implemented");
         }
         catch (SQLException ex) {
             Logger.getLogger(DataIMPL.class.getName()).log(Level.SEVERE, null, ex);

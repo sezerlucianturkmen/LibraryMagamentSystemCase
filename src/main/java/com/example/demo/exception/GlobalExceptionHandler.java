@@ -31,7 +31,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorMessage> handleMonolitichException(ManagerException ex){
         ErrorType errorType = ex.getErrorType();
         HttpStatus httpStatus = errorType.getHttpStatus();
-        return new ResponseEntity(createError(errorType,ex),httpStatus);
+        return new ResponseEntity<>(createError(errorType,ex),httpStatus);
     }
 
 
@@ -92,7 +92,7 @@ public class GlobalExceptionHandler {
 
 
     private ErrorMessage createError(ErrorType errorType, Exception exception){
-        System.out.println("Something went wrong..: "+exception.getMessage());
+        System.err.println("Something went wrong..: "+exception.getMessage());
         return ErrorMessage.builder()
                 .code(errorType.getCode())
                 .message(errorType.getMessage())
