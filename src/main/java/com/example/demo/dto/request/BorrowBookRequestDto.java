@@ -9,9 +9,9 @@ import lombok.*;
 @Setter
 @Builder
 public class BorrowBookRequestDto {
-    @NotNull
+
     private String isbn;
-    @NotNull
+
     private String email;
 
 }

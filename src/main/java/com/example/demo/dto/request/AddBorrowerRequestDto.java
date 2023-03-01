@@ -10,8 +10,7 @@ import lombok.*;
 @Setter
 @Builder
 public class AddBorrowerRequestDto {
-    @Email
-    @NotNull
+
     private String email;
     private String name;
     private String phone;

@@ -7,7 +7,8 @@ public class Constant {
     }
     public static final String DBURL = "jdbc:postgresql://localhost:5432/LibraryDB";
     public static final String USERNAME = "postgres";
-    public static final String PASSWORD = "root";
+    public static final String DIGIT = "root";
+
 
 
     public static final String LIBRARY = "library";

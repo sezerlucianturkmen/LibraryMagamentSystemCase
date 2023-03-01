@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 @Component
 public class DataIMPL {
 
-    @PostConstruct
+    //@PostConstruct
     private void start(){
         createTblbook();
         createTblborrower();

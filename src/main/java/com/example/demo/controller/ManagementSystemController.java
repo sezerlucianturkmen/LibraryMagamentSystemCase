@@ -7,6 +7,7 @@ import com.example.demo.dto.request.ReturnBookRequestDto;
 import com.example.demo.dto.response.BookResponseDto;
 import com.example.demo.dto.response.BorrowerResponseDto;
 import com.example.demo.service.LibraryManagementSystem;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -41,7 +42,7 @@ public class ManagementSystemController {
 
     //BORROWER
     @PostMapping(ADDBORROWER)
-    public ResponseEntity<Boolean> addBorrower(@RequestBody AddBorrowerRequestDto dto){
+    public ResponseEntity<Boolean> addBorrower(@RequestBody  AddBorrowerRequestDto dto){
         return ResponseEntity.ok(libraryManagementSystem.addBorrower(dto));
     }
 

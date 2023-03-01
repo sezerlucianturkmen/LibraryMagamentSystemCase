@@ -1,5 +1,6 @@
 package com.example.demo.dto.request;
 
+
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
@@ -9,7 +10,7 @@ import lombok.*;
 @Setter
 @Builder
 public class AddBookRequestDto {
-    @NotNull
+
     private String isbn;
     private String title;
     private String author;
