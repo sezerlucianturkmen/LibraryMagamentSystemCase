@@ -11,14 +11,17 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import static com.example.demo.exception.ErrorType.BAD_REQUEST_ERROR;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
+
+    private Logger logger = Logger.getLogger(GlobalExceptionHandler.class.getName());
 
     @ExceptionHandler(RuntimeException.class)
     @ResponseBody
@@ -92,7 +95,7 @@ public class GlobalExceptionHandler {
 
 
     private ErrorMessage createError(ErrorType errorType, Exception exception){
-        System.err.println("Something went wrong..: "+exception.getMessage());
+        logger.log(Level.INFO,"Something went wrong..: "+exception.getMessage());
         return ErrorMessage.builder()
                 .code(errorType.getCode())
                 .message(errorType.getMessage())

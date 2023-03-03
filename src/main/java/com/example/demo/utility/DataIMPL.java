@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 @RequiredArgsConstructor
 @Component
 public class DataIMPL {
-
+    private Logger logger = Logger.getLogger(DataIMPL.class.getName());
     @PostConstruct
     private void start(){
         createTblbook();
@@ -27,7 +27,7 @@ public class DataIMPL {
         try {
             ps = DBConnection.getInstance().getConnection().prepareStatement(sql);
             ps.executeQuery();
-            System.err.println("tblbook is implemented");
+            logger.log(Level.INFO,"tblbook is implemented");
         }
         catch (SQLException ex) {
             Logger.getLogger(DataIMPL.class.getName()).log(Level.SEVERE, null, ex);
@@ -41,7 +41,7 @@ public class DataIMPL {
         try {
             ps = DBConnection.getInstance().getConnection().prepareStatement(sql);
             ps.executeQuery();
-            System.err.println("tblborrower is implemented");
+            logger.log(Level.INFO,"tblborrower is implemented");
         }
         catch (SQLException ex) {
             Logger.getLogger(DataIMPL.class.getName()).log(Level.SEVERE, null, ex);
@@ -53,7 +53,7 @@ public class DataIMPL {
         try {
             ps = DBConnection.getInstance().getConnection().prepareStatement(sql);
             ps.executeQuery();
-            System.err.println("tblbookborrow is implemented");
+            logger.log(Level.INFO,"tblbookborrow is implemented");
         }
         catch (SQLException ex) {
             Logger.getLogger(DataIMPL.class.getName()).log(Level.SEVERE, null, ex);

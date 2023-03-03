@@ -1,6 +1,5 @@
 package com.example.demo.utility;
 
-
 import org.springframework.stereotype.Component;
 
 import java.sql.*;
@@ -9,7 +8,7 @@ import java.util.logging.Logger;
 import static com.example.demo.constant.Constant.*;
 @Component
 public class DBConnection {
-
+    private Logger logger = Logger.getLogger(DBConnection.class.getName());
     private Connection connection;
     private static DBConnection instance;
 
@@ -41,7 +40,7 @@ public class DBConnection {
         try {
             Driver.class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(DBURL, USERNAME, DIGIT);
-            System.err.println("Connection successful");
+            logger.log(Level.INFO,"Connection successful");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(DBConnection.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {

@@ -7,7 +7,6 @@ import com.example.demo.dto.request.ReturnBookRequestDto;
 import com.example.demo.dto.response.BookResponseDto;
 import com.example.demo.dto.response.BorrowerResponseDto;
 import com.example.demo.service.LibraryManagementSystem;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

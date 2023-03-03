@@ -1,6 +1,5 @@
 package com.example.demo.repository;
 
-import com.example.demo.entity.Borrower;
 import com.example.demo.entity.book.Book;
 import com.example.demo.utility.BookFactory;
 import com.example.demo.utility.DBConnection;
@@ -21,11 +20,11 @@ import java.util.logging.Logger;
 public class BookRepository implements ICRUD<Book> {
 
     private final BookFactory bookFactory;
-    private final String isbn = "isbn";
-    private final String title = "title";
-    private final String author = "author";
-    private final String availableCopies = "available_copies";
-    private final String type = "type";
+    private static final String isbn = "isbn";
+    private static final String title = "title";
+    private static final String author = "author";
+    private static final String availableCopies = "available_copies";
+    private static final String type = "type";
 
     @Override
     public void save(Book book) {

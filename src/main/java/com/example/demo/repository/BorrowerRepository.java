@@ -7,9 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -18,9 +16,9 @@ import java.util.logging.Logger;
 public class BorrowerRepository implements ICRUD<Borrower> {
 
     private final BookFactory bookFactory;
-    private final String email = "email";
-    private final String phone = "phone";
-    private final String name = "name;";
+    private static final String email = "email";
+    private static final String phone = "phone";
+    private static final String name = "name;";
 
     @Override
     public void save(Borrower borrower) {
